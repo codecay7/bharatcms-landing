@@ -252,110 +252,85 @@ export default function LandingPage() {
           </div>
 
           {/* Dashboard Preview SVG Mockup */}
-          <div className="relative max-w-5xl mx-auto" style={{ perspective: '1000px' }}>
-            <motion.div
-              initial={{ opacity: 0, rotateX: 12 }}
-              whileInView={{ opacity: 1, rotateX: 6 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="glass-strong rounded-2xl overflow-hidden p-1 border border-white/20 bg-gradient-to-br from-white/10 to-transparent"
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              {/* Mock dashboard SVG */}
-              <div className="rounded-xl bg-gradient-to-br from-[#0a1014] to-[#161d1f] aspect-video p-6 md:p-10 flex flex-col gap-4 relative overflow-hidden">
-                {/* Top bar */}
-                <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-                    <div className="w-3 h-3 rounded-full bg-green-500/60" />
-                  </div>
-                  <div className="text-xs text-white/30 font-mono">bharatcms.com/admin</div>
-                  <div className="w-12" />
-                </div>
-                {/* Main content */}
-                <div className="grid grid-cols-12 gap-4 flex-1">
-                  {/* Sidebar */}
-                  <div className="col-span-3 bg-white/[0.02] rounded-lg p-3 space-y-2">
-                    <div className="text-[10px] text-cyan-brand font-bold mb-2">CONTENT</div>
-                    {['Products', 'Orders', 'Customers', 'Pages'].map((item, i) => (
-                      <div key={item} className={`text-xs px-2 py-1.5 rounded ${i === 0 ? 'bg-cyan-brand/20 text-cyan-brand' : 'text-white/40'}`}>
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  {/* Main */}
-                  <div className="col-span-9 space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="h-3 bg-white/10 rounded w-32" />
-                      <div className="h-6 bg-cyan-brand/30 rounded w-24" />
-                    </div>
-                    {/* Stats cards */}
-                    <div className="grid grid-cols-3 gap-3">
-                      {[
-                        { label: 'Revenue', value: '₹1.2L', color: 'text-cyan-brand' },
-                        { label: 'Orders', value: '47', color: 'text-saffron-brand' },
-                        { label: 'AI Generated', value: '12', color: 'text-purple-brand' },
-                      ].map((stat) => (
-                        <div key={stat.label} className="bg-white/[0.03] border border-white/5 rounded-lg p-3">
-                          <div className="text-[9px] text-white/40 uppercase">{stat.label}</div>
-                          <div className={`text-lg font-bold ${stat.color}`}>{stat.value}</div>
-                        </div>
-                      ))}
-                    </div>
-                    {/* Chart placeholder */}
-                    <div className="bg-white/[0.03] border border-white/5 rounded-lg p-3 flex-1 flex items-end gap-1 h-24">
-                      {[40, 60, 35, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
-                        <div
-                          key={i}
-                          style={{ height: `${h}%` }}
-                          className="flex-1 bg-gradient-to-t from-cyan-brand/40 to-cyan-brand/80 rounded-sm"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+         <div className="rounded-xl bg-gradient-to-br from-[#0a1014] to-[#161d1f] aspect-[4/3] sm:aspect-video p-3 sm:p-6 md:p-10 flex flex-col gap-3 sm:gap-4 relative overflow-hidden">
+  
+  {/* Top bar */}
+  <div className="flex items-center justify-between border-b border-white/5 pb-2 sm:pb-4">
+    <div className="flex items-center gap-1.5 sm:gap-2">
+      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500/60" />
+      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500/60" />
+      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500/60" />
+    </div>
+    <div className="text-[9px] sm:text-xs text-white/30 font-mono truncate px-2">
+      bharatcms.com/admin
+    </div>
+    <div className="w-6 sm:w-12 shrink-0" />
+  </div>
 
-            {/* Floating Cards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="absolute -top-8 -right-4 lg:-right-10 glass-strong p-4 rounded-xl btn-neo border border-white/20 hidden md:block animate-float"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-cyan-brand/20 rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-cyan-brand" />
-                </div>
-                <div className="text-left">
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Waitlist</p>
-                  <p className="text-base font-bold text-white">Growing daily</p>
-                </div>
-              </div>
-            </motion.div>
+  {/* Main content */}
+  <div className="grid grid-cols-12 gap-2 sm:gap-4 flex-1 min-h-0">
+    {/* Sidebar */}
+    <div className="col-span-4 sm:col-span-4 md:col-span-3 bg-white/[0.02] rounded-lg p-2 sm:p-3 space-y-1 sm:space-y-2">
+      {/* CONTENT label - smaller */}
+      <div className="text-[7px] sm:text-[9px] md:text-[10px] text-cyan-brand font-bold mb-1.5 sm:mb-2 tracking-wider">
+        CONTENT
+      </div>
+      {/* Menu items - smaller */}
+      {['Products', 'Orders', 'Customers', 'Pages'].map((item, i) => (
+        <div
+          key={item}
+          className={`text-[9px] sm:text-[10px] md:text-xs px-1.5 sm:px-2 py-1 sm:py-1.5 rounded ${
+            i === 0 ? 'bg-cyan-brand/20 text-cyan-brand' : 'text-white/40'
+          }`}
+        >
+          {item}
+        </div>
+      ))}
+    </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="absolute -bottom-8 -left-4 lg:-left-10 glass-strong p-4 rounded-xl btn-neo border border-white/20 hidden md:block animate-float"
-              style={{ animationDelay: '1s' }}
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-emerald-400" />
-                </div>
-                <div className="text-left">
-                  <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold">🇮🇳 Mumbai Region</p>
-                  <p className="text-base font-bold text-white">ap-south-1</p>
-                </div>
-              </div>
-            </motion.div>
+    {/* Main */}
+    <div className="col-span-8 sm:col-span-8 md:col-span-9 space-y-2 sm:space-y-3 flex flex-col min-h-0">
+      <div className="flex items-center justify-between">
+        <div className="h-2 sm:h-3 bg-white/10 rounded w-20 sm:w-32" />
+        <div className="h-5 sm:h-6 bg-cyan-brand/30 rounded w-16 sm:w-24" />
+      </div>
+
+      {/* Stats cards - smaller text */}
+      <div className="grid grid-cols-3 gap-1.5 sm:gap-3">
+        {[
+          { label: 'Revenue', value: '₹1.2L', color: 'text-cyan-brand' },
+          { label: 'Orders', value: '47', color: 'text-saffron-brand' },
+          { label: 'AI Generated', value: '12', color: 'text-purple-brand' },
+        ].map((stat) => (
+          <div
+            key={stat.label}
+            className="bg-white/[0.03] border border-white/5 rounded-md sm:rounded-lg p-1.5 sm:p-3"
+          >
+            {/* Label - smaller */}
+            <div className="text-[6px] sm:text-[8px] md:text-[9px] text-white/40 uppercase tracking-wide truncate leading-tight">
+              {stat.label}
+            </div>
+            {/* Value - smaller */}
+            <div className={`text-xs sm:text-base md:text-lg font-bold ${stat.color} mt-0.5`}>
+              {stat.value}
+            </div>
           </div>
+        ))}
+      </div>
+
+      {/* Chart */}
+      <div className="bg-white/[0.03] border border-white/5 rounded-md sm:rounded-lg p-2 sm:p-3 flex-1 flex items-end gap-0.5 sm:gap-1 min-h-[60px]">
+        {[40, 60, 35, 80, 55, 90, 70, 85, 60, 95, 75, 88].map((h, i) => (
+          <div
+            key={i}
+            style={{ height: `${h}%` }}
+            className="flex-1 bg-gradient-to-t from-cyan-brand/40 to-cyan-brand/80 rounded-sm"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
         </motion.div>
       </section>
 
