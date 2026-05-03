@@ -167,20 +167,37 @@ export default function LandingPage() {
                     />
                   </div>
 
-                  <select
-                    value={useCase}
-                    onChange={(e) => setUseCase(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-brand/60 transition"
-                  >
-                    <option value="" className="bg-[#0e1417]">What will you build?</option>
-                    <option value="ecommerce" className="bg-[#0e1417]">E-commerce store</option>
-                    <option value="booking" className="bg-[#0e1417]">Booking / Appointments</option>
-                    <option value="realestate" className="bg-[#0e1417]">Real Estate listings</option>
-                    <option value="education" className="bg-[#0e1417]">Education / Coaching</option>
-                    <option value="blog" className="bg-[#0e1417]">Blog / Content site</option>
-                    <option value="agency" className="bg-[#0e1417]">Agency client work</option>
-                    <option value="other" className="bg-[#0e1417]">Something else</option>
-                  </select>
+                  <div className="relative">
+  <select
+    value={useCase}
+    onChange={(e) => setUseCase(e.target.value)}
+    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:border-cyan-brand/60 transition appearance-none cursor-pointer"
+  >
+    <option value="" className="bg-[#0e1417]">What will you build?</option>
+    <option value="ecommerce" className="bg-[#0e1417]">E-commerce store</option>
+    <option value="booking" className="bg-[#0e1417]">Booking / Appointments</option>
+    <option value="realestate" className="bg-[#0e1417]">Real Estate listings</option>
+    <option value="education" className="bg-[#0e1417]">Education / Coaching</option>
+    <option value="blog" className="bg-[#0e1417]">Blog / Content site</option>
+    <option value="agency" className="bg-[#0e1417]">Agency client work</option>
+    <option value="other" className="bg-[#0e1417]">Something else</option>
+  </select>
+
+  {/* Custom arrow */}
+  <svg
+    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/60"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path
+      fillRule="evenodd"
+      d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+      clipRule="evenodd"
+    />
+  </svg>
+</div>
 
                   {error && (
                     <p className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg px-3 py-2">
