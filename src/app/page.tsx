@@ -237,7 +237,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">You're in! 🎉</h3>
                 <p className="text-white/60 mb-6">
-                  We'll email when BharatCMS launches. Help us spread the word?
+                  We will email when BharatCMS launches. Help us spread the word?
                 </p>
                 <a
                   href="https://twitter.com/intent/tweet?text=Just%20joined%20the%20%40BharatCMS%20waitlist%20%E2%80%94%20India%27s%20first%20AI-powered%20headless%20CMS%20with%20Razorpay%20%26%20GST%20built-in%20%F0%9F%87%AE%F0%9F%87%B3%20%23BuildInPublic"
