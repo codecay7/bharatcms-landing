@@ -1,0 +1,50 @@
+# BharatCMS Landing Page
+
+## Tech Stack
+- Next.js 14 (App Router) + TypeScript
+- Tailwind CSS + shadcn/ui
+- Framer Motion (animations)
+- Clerk (auth)
+- Zustand (state)
+- React Query (data)
+
+## Design System
+- Style: Glassmorphism + Dark Mode
+- Primary: #00d4ff (cyan)
+- Secondary: #a855f7 (purple)
+- Indian: #FF9933 (saffron) - sparingly
+- Background: #0f0f12
+- Glass: rgba(255,255,255,0.08) + backdrop-blur 16px
+- Border-radius: 16px (cards), 12px (buttons)
+- Font: Inter (headings + body), JetBrains Mono (code)
+
+## Component Patterns
+- Use shadcn/ui as base
+- Glass effect on all cards
+- Neobrutalist shadow on primary buttons
+- Framer Motion for entrance animations
+- Mobile-first responsive design
+
+## Folder Structure
+- src/app/(marketing) - Public pages
+- src/app/(auth) - Login/signup
+- src/app/(dashboard) - User dashboard
+- src/components/ui - shadcn primitives
+- src/components/marketing - Landing components
+- src/components/dashboard - Dashboard components
+
+## DON'T
+- Don't use stock photos (use real Indian context)
+- Don't use rainbow colors (stick to palette)
+- Don't aggressive shadows (subtle only)
+- Don't crowded layouts (use whitespace)
+
+## DO
+- Use ₹ symbol (not $)
+- Indian number format (1,00,000)
+- Hindi/English language toggle
+- Mobile-first design
+- Skeleton loaders (not spinners)
+
+## Current Phase
+Phase: 1 (Build landing page)

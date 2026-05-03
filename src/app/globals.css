@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ===== TAILWIND V4 THEME ===== */
+@theme {
+  --color-cyan-brand: #00d4ff;
+  --color-cyan-hover: #3cd7ff;
+  --color-purple-brand: #a855f7;
+  --color-purple-soft: #ddb7ff;
+  --color-saffron-brand: #FF9933;
+  --color-saffron-soft: #feb528;
+  
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+  
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== BASE STYLES ===== */
+/* NOTE: No * reset — Tailwind v4 Preflight handles it */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0e1417;
+  color: white;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ===== CUSTOM UTILITIES ===== */
+@utility glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@utility btn-neo {
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 4px 4px 0px 0px rgba(0, 212, 255, 0.6);
+}
+
+.btn-neo:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(0, 212, 255, 0.8);
+}
+
+.btn-neo:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 212, 255, 0.6);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0e1417; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,212,255,0.4); }
+
+/* ===== SELECT DROPDOWN ===== */
+select option {
+  background: #0e1417;
+  color: white;
+}
