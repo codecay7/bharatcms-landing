@@ -24,6 +24,7 @@ import {
 } from 'lucide-react';
 import { GithubIcon, TwitterIcon } from '@/lib/icons';
 import { supabase } from '@/lib/supabase';
+import NavbarAuth from '@/components/NavbarAuth';
 
 export default function LandingPage() {
   const [name, setName] = useState('');
@@ -96,12 +97,7 @@ export default function LandingPage() {
             <span className="hidden sm:block bg-saffron-brand/10 text-saffron-brand text-[10px] font-bold px-2 py-1 rounded border border-saffron-brand/20 uppercase tracking-widest">
               Made in India 🇮🇳
             </span>
-            <a
-              href="#waitlist"
-              className="bg-cyan-brand text-black font-bold px-5 py-2 rounded-lg btn-neo text-sm"
-            >
-              Join Waitlist
-            </a>
+            <NavbarAuth />
           </div>
         </nav>
       </header>
