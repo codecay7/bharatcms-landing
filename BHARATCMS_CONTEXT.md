@@ -69,3 +69,35 @@ Desktop/Projects/bharatcms-workspace/ (NOT ~/Projects)
 - Plan lost on refresh → Clerk unsafeMetadata
 - tenantId hardcoded → dynamic from Clerk metadata
 - Clerk crash after payment → user.reload() + router.refresh()
+
+
+---
+
+## UPDATE May 13 2026 Evening (Day 10)
+
+### Phase 4 COMPLETE - commit d72e261
+- Clerk webhook endpoint: POST /api/clerk-webhook/user-created
+- svix signature verification working
+- user.created fires -> Tenant auto-created in Strapi with plan hobby
+- tenantId stored in Clerk unsafeMetadata
+- raw-body middleware fixed (must run before strapi::body)
+- No hardcoded tenantId anywhere
+- CLERK_WEBHOOK_SECRET=whsec_cIQwopxGCIZiQce1MnLQ3J3zIpt8Frr/ in bharatcms/.env
+- CLERK_API_KEY=sk_test_wa8kEZORO9AzcpAw9Hgjvk9svwjEGHCqhdwbsOFkZo in bharatcms/.env
+
+### ALL PHASES DONE SO FAR
+- Phase 0: Foundation
+- Phase 1: Landing + Vercel
+- Phase 2: Razorpay payments (commit c2083bc)
+- Phase 3: GST Invoice PDF DejaVu font 411KB
+- Phase 4: Clerk webhook multi-tenant (commit d72e261)
+
+### NEXT: Phase 5 - E-commerce Template
+Content types: Product, Category, Order, Customer
+Storefront frontend Next.js
+Connect to Razorpay
+End-to-end checkout flow
+
+### GIT COMMITS
+- bharatcms: d72e261 (latest)
+- bharatcms-landing: 93cd252 (latest)
