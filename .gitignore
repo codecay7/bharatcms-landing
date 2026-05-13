@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+BHARATCMS_CONTEXT.md
+.env
+.env.local
+.env.*
+*.pem
+*.key
