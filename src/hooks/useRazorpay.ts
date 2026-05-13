@@ -35,7 +35,7 @@ export function useRazorpay() {
     planName: string;
     userEmail: string;
     userName: string;
-    tenantId: number;
+    tenantId?: number | null;
     onSuccess: (paymentId: string, plan: string) => void;
     onFailure: (error: string) => void;
   }) => {
@@ -51,7 +51,7 @@ export function useRazorpay() {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ amount, plan: planName.toLowerCase() }),
+      body: JSON.stringify({ amount, plan: planName.toLowerCase() }),
         }
       );
       const data = await res.json();
@@ -86,7 +86,7 @@ export function useRazorpay() {
                   razorpay_order_id: response.razorpay_order_id,
                   razorpay_payment_id: response.razorpay_payment_id,
                   razorpay_signature: response.razorpay_signature,
-                  tenantId: tenantId, // ✅ dynamic, not hardcoded
+                  tenantId: tenantId,
                 }),
               }
             );
@@ -96,12 +96,12 @@ export function useRazorpay() {
             if (verifyData.success) {
               // ✅ Update Clerk publicMetadata so plan survives refresh
               await user?.update({
-                unsafeMetadata: {
-                  plan: planName.toLowerCase(),
-                  planUpdatedAt: new Date().toISOString(),
-                  tenantId: tenantId,
-                },
-              });
+                  unsafeMetadata: {
+                    plan: planName.toLowerCase(),
+                    planUpdatedAt: new Date().toISOString(),
+                    tenantId: tenantId,
+                  },
+                });
 
               // ✅ Reload session so Clerk picks up new metadata immediately
               await user?.reload();

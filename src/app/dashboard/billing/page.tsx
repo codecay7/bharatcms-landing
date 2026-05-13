@@ -49,7 +49,7 @@ export default function BillingPage() {
 
   // ✅ Read plan from Clerk unsafeMetadata — persists across refresh
   const currentPlan = ((user?.unsafeMetadata?.plan as string) || 'hobby').toLowerCase();
-  const tenantId = (user?.unsafeMetadata?.tenantId as number) || 1;
+  const tenantId = (user?.unsafeMetadata?.tenantId as number) || undefined;
 
   const handleUpgrade = async (planName: string, price: number) => {
     if (planName.toLowerCase() === currentPlan || price === 0) return;
@@ -62,7 +62,7 @@ export default function BillingPage() {
       tenantId,
       userEmail: user?.primaryEmailAddress?.emailAddress ?? '',
       userName: `${user?.firstName ?? ''} ${user?.lastName ?? ''}`.trim(),
-      onSuccess: async (paymentId, plan) => {
+              onSuccess: async (paymentId, plan) => {
         setLoadingPlan(null);
           // ✅ Generate invoice PDF via Strapi and trigger download
           try {
@@ -81,7 +81,7 @@ export default function BillingPage() {
                 }
               ],
               payment_id: paymentId,
-              tenant: tenantId,
+              tenant: tenantId ?? null,
               status: 'paid'
             };
 
@@ -110,7 +110,7 @@ export default function BillingPage() {
             // show toast
             const { toast } = await import('sonner');
             toast.success('📄 Invoice downloaded');
-          } catch (err) {
+          } catch {
             const { toast } = await import('sonner');
             toast.error('Failed to generate invoice');
           }
@@ -159,7 +159,7 @@ export default function BillingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {PLANS.map((plan) => {
               const isCurrent = plan.name.toLowerCase() === currentPlan;
-              const isSuccess = loadingPlan === null && isCurrent && currentPlan !== 'hobby';
+              // const isSuccess not used — removed to satisfy linter
 
               return (
                 <div
