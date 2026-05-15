@@ -91,10 +91,8 @@ export default function LandingPage() {
               <a href="#pricing" className="text-white/60 hover:text-white transition">Pricing</a>
               <a href="#scope" className="text-white/60 hover:text-white transition">Scope</a>
               <a href="https://github.com/codecay7/bharatcms" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition">GitHub</a>
-              <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo 2197</a>
-              <a href="https://github.com/codecay7/bharatcms" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition">GitHub</a>
-              <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo 2197</a>
               <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo ↗</a>
+              
             </div>
           </div>
           <div className="flex items-center gap-3">
