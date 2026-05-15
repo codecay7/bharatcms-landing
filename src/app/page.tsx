@@ -91,6 +91,10 @@ export default function LandingPage() {
               <a href="#pricing" className="text-white/60 hover:text-white transition">Pricing</a>
               <a href="#scope" className="text-white/60 hover:text-white transition">Scope</a>
               <a href="https://github.com/codecay7/bharatcms" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition">GitHub</a>
+              <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo 2197</a>
+              <a href="https://github.com/codecay7/bharatcms" target="_blank" rel="noreferrer" className="text-white/60 hover:text-white transition">GitHub</a>
+              <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo 2197</a>
+              <a href="https://bharatcms-storefront-ecommerce.vercel.app/store" target="_blank" rel="noreferrer" className="text-cyan-brand hover:text-white transition font-semibold">Store Demo ↗</a>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -266,9 +270,8 @@ export default function LandingPage() {
                 {['Products', 'Orders', 'Customers', 'Pages'].map((item, i) => (
                   <div
                     key={item}
-                    className={`text-[9px] sm:text-[10px] md:text-xs px-1.5 sm:px-2 py-1 sm:py-1.5 rounded ${
-                      i === 0 ? 'bg-cyan-brand/20 text-cyan-brand' : 'text-white/40'
-                    }`}
+                    className={`text-[9px] sm:text-[10px] md:text-xs px-1.5 sm:px-2 py-1 sm:py-1.5 rounded ${i === 0 ? 'bg-cyan-brand/20 text-cyan-brand' : 'text-white/40'
+                      }`}
                   >
                     {item}
                   </div>
@@ -317,243 +320,243 @@ export default function LandingPage() {
       </section>
 
       {/* ============ NEW: WHY THIS EXISTS (Premium UI) ============ */}
-<section className="max-w-6xl mx-auto px-6 md:px-8 py-32 relative">
-  {/* Background accent */}
-  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-cyan-brand/5 blur-[120px] rounded-full -z-10" />
+      <section className="max-w-6xl mx-auto px-6 md:px-8 py-32 relative">
+        {/* Background accent */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-cyan-brand/5 blur-[120px] rounded-full -z-10" />
 
-  {/* Header */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="text-center mb-16"
-  >
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-      <span className="w-1.5 h-1.5 rounded-full bg-saffron-brand animate-pulse" />
-      <span className="text-xs font-semibold tracking-wider uppercase text-white/70">
-        The Problem
-      </span>
-    </div>
-    <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-      Stop Rebuilding the<br />
-      <span className="text-cyan-brand">Same Stack</span> Every Project.
-    </h2>
-    <p className="text-lg text-white/50 max-w-2xl mx-auto">
-      Every Indian developer wastes weeks on the same setup.
-      <br className="hidden md:block" />
-      We've already done it — for you.
-    </p>
-  </motion.div>
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-saffron-brand animate-pulse" />
+            <span className="text-xs font-semibold tracking-wider uppercase text-white/70">
+              The Problem
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
+            Stop Rebuilding the<br />
+            <span className="text-cyan-brand">Same Stack</span> Every Project.
+          </h2>
+          <p className="text-lg text-white/50 max-w-2xl mx-auto">
+            Every Indian developer wastes weeks on the same setup.
+            <br className="hidden md:block" />
+            We've already done it — for you.
+          </p>
+        </motion.div>
 
-  {/* Comparison Container */}
-  <div className="relative">
-    {/* VS Divider (Desktop) */}
-    <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 items-center justify-center">
-      <div className="relative">
-        <div className="absolute inset-0 bg-cyan-brand blur-xl opacity-50" />
-        <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-cyan-brand to-purple-brand flex items-center justify-center border-4 border-[#0e1417] shadow-2xl">
-          <span className="text-black font-black text-sm tracking-tight">VS</span>
-        </div>
-      </div>
-    </div>
-
-    <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
-      
-      {/* WITHOUT BharatCMS */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        className="relative group"
-      >
-        <div className="relative glass rounded-3xl p-8 md:p-10 border border-red-500/15 bg-gradient-to-br from-red-500/[0.04] via-transparent to-transparent overflow-hidden h-full">
-          {/* Top gradient line */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
-          
-          {/* Watermark */}
-          <div className="absolute -top-8 -right-8 text-[120px] font-black text-red-500/[0.03] select-none pointer-events-none">
-            😩
+        {/* Comparison Container */}
+        <div className="relative">
+          {/* VS Divider (Desktop) */}
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 items-center justify-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-cyan-brand blur-xl opacity-50" />
+              <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-cyan-brand to-purple-brand flex items-center justify-center border-4 border-[#0e1417] shadow-2xl">
+                <span className="text-black font-black text-sm tracking-tight">VS</span>
+              </div>
+            </div>
           </div>
 
-          {/* Header */}
-          <div className="relative mb-8">
-            <p className="text-[10px] uppercase tracking-widest text-red-400/70 font-bold mb-2">
-              Without BharatCMS
-            </p>
-            <h3 className="text-3xl md:text-4xl font-black text-white/90">
-              The Old Way
-            </h3>
-            <p className="text-sm text-white/40 mt-2">
-              ~3-4 weeks of setup. Every. Single. Project.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-12">
 
-          {/* List */}
-          <ul className="relative space-y-4">
-            {[
-              { time: '2 weeks', task: 'Integrating Razorpay', detail: 'Reading docs, handling webhooks, testing flows' },
-              { time: '5 days', task: 'GST invoice logic', detail: 'HSN codes, CGST/SGST splits, PDF generation' },
-              { time: '3 days', task: 'Configuring Mumbai hosting', detail: 'AWS setup, CDN, SSL, monitoring' },
-              { time: '∞ days', task: 'Stripe-first tools', detail: "Wrappers, hacks, things that don't fit India" },
-            ].map((item, i) => (
-              <motion.li
-                key={item.task}
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 + i * 0.08 }}
-                className="flex items-start gap-4 group/item"
-              >
-                {/* Time badge */}
-                <div className="shrink-0 w-16 text-center">
-                  <div className="px-2 py-1 rounded-md bg-red-500/10 border border-red-500/20">
-                    <p className="text-[10px] font-mono font-bold text-red-400 uppercase">
-                      {item.time}
+            {/* WITHOUT BharatCMS */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative group"
+            >
+              <div className="relative glass rounded-3xl p-8 md:p-10 border border-red-500/15 bg-gradient-to-br from-red-500/[0.04] via-transparent to-transparent overflow-hidden h-full">
+                {/* Top gradient line */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-red-500/40 to-transparent" />
+
+                {/* Watermark */}
+                <div className="absolute -top-8 -right-8 text-[120px] font-black text-red-500/[0.03] select-none pointer-events-none">
+                  😩
+                </div>
+
+                {/* Header */}
+                <div className="relative mb-8">
+                  <p className="text-[10px] uppercase tracking-widest text-red-400/70 font-bold mb-2">
+                    Without BharatCMS
+                  </p>
+                  <h3 className="text-3xl md:text-4xl font-black text-white/90">
+                    The Old Way
+                  </h3>
+                  <p className="text-sm text-white/40 mt-2">
+                    ~3-4 weeks of setup. Every. Single. Project.
+                  </p>
+                </div>
+
+                {/* List */}
+                <ul className="relative space-y-4">
+                  {[
+                    { time: '2 weeks', task: 'Integrating Razorpay', detail: 'Reading docs, handling webhooks, testing flows' },
+                    { time: '5 days', task: 'GST invoice logic', detail: 'HSN codes, CGST/SGST splits, PDF generation' },
+                    { time: '3 days', task: 'Configuring Mumbai hosting', detail: 'AWS setup, CDN, SSL, monitoring' },
+                    { time: '∞ days', task: 'Stripe-first tools', detail: "Wrappers, hacks, things that don't fit India" },
+                  ].map((item, i) => (
+                    <motion.li
+                      key={item.task}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.1 + i * 0.08 }}
+                      className="flex items-start gap-4 group/item"
+                    >
+                      {/* Time badge */}
+                      <div className="shrink-0 w-16 text-center">
+                        <div className="px-2 py-1 rounded-md bg-red-500/10 border border-red-500/20">
+                          <p className="text-[10px] font-mono font-bold text-red-400 uppercase">
+                            {item.time}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 pb-3 border-b border-white/5 last:border-0">
+                        <p className="text-white/80 font-semibold text-base">
+                          {item.task}
+                        </p>
+                        <p className="text-white/40 text-xs mt-1">
+                          {item.detail}
+                        </p>
+                      </div>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* Bottom Result */}
+                <div className="mt-8 pt-6 border-t border-red-500/10">
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs text-white/40 uppercase tracking-wider">
+                      Total time wasted
+                    </p>
+                    <p className="text-2xl font-black text-red-400">
+                      3-4 weeks
                     </p>
                   </div>
                 </div>
+              </div>
+            </motion.div>
 
-                {/* Content */}
-                <div className="flex-1 pb-3 border-b border-white/5 last:border-0">
-                  <p className="text-white/80 font-semibold text-base">
-                    {item.task}
+            {/* WITH BharatCMS */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative group"
+            >
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-cyan-brand/30 via-purple-brand/20 to-cyan-brand/30 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition duration-700" />
+
+              <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-cyan-brand/30 bg-gradient-to-br from-cyan-brand/[0.08] via-transparent to-purple-brand/[0.05] overflow-hidden h-full">
+                {/* Top gradient line */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-brand to-transparent" />
+
+                {/* Watermark */}
+                <div className="absolute -top-8 -right-8 text-[120px] font-black text-cyan-brand/[0.04] select-none pointer-events-none">
+                  🚀
+                </div>
+
+                {/* Header */}
+                <div className="relative mb-8">
+                  <p className="text-[10px] uppercase tracking-widest text-cyan-brand font-bold mb-2">
+                    With BharatCMS
                   </p>
-                  <p className="text-white/40 text-xs mt-1">
-                    {item.detail}
+                  <h3 className="text-3xl md:text-4xl font-black text-white">
+                    Day One Ready
+                  </h3>
+                  <p className="text-sm text-white/50 mt-2">
+                    Skip the setup. Start shipping features.
                   </p>
                 </div>
-              </motion.li>
-            ))}
-          </ul>
 
-          {/* Bottom Result */}
-          <div className="mt-8 pt-6 border-t border-red-500/10">
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-white/40 uppercase tracking-wider">
-                Total time wasted
-              </p>
-              <p className="text-2xl font-black text-red-400">
-                3-4 weeks
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+                {/* List */}
+                <ul className="relative space-y-4">
+                  {[
+                    { time: '0 mins', task: 'Razorpay ready out-of-box', detail: 'UPI, cards, subscriptions, webhooks' },
+                    { time: '0 mins', task: 'GST invoices auto-generated', detail: 'Compliant PDFs with all tax splits' },
+                    { time: '0 mins', task: 'Mumbai hosting included', detail: 'ap-south-1, sub-50ms latency' },
+                    { time: '0 mins', task: 'India-first by default', detail: '₹ symbol, DD/MM dates, regional UX' },
+                  ].map((item, i) => (
+                    <motion.li
+                      key={item.task}
+                      initial={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.1 + i * 0.08 }}
+                      className="flex items-start gap-4 group/item"
+                    >
+                      {/* Time badge */}
+                      <div className="shrink-0 w-16 text-center">
+                        <div className="px-2 py-1 rounded-md bg-cyan-brand/15 border border-cyan-brand/30">
+                          <p className="text-[10px] font-mono font-bold text-cyan-brand uppercase">
+                            {item.time}
+                          </p>
+                        </div>
+                      </div>
 
-      {/* WITH BharatCMS */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.1 }}
-        className="relative group"
-      >
-        {/* Glow effect */}
-        <div className="absolute -inset-1 bg-gradient-to-br from-cyan-brand/30 via-purple-brand/20 to-cyan-brand/30 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition duration-700" />
-        
-        <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-cyan-brand/30 bg-gradient-to-br from-cyan-brand/[0.08] via-transparent to-purple-brand/[0.05] overflow-hidden h-full">
-          {/* Top gradient line */}
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-brand to-transparent" />
+                      {/* Content */}
+                      <div className="flex-1 pb-3 border-b border-white/5 last:border-0">
+                        <p className="text-white font-semibold text-base">
+                          {item.task}
+                        </p>
+                        <p className="text-white/50 text-xs mt-1">
+                          {item.detail}
+                        </p>
+                      </div>
+                    </motion.li>
+                  ))}
+                </ul>
 
-          {/* Watermark */}
-          <div className="absolute -top-8 -right-8 text-[120px] font-black text-cyan-brand/[0.04] select-none pointer-events-none">
-            🚀
-          </div>
-
-          {/* Header */}
-          <div className="relative mb-8">
-            <p className="text-[10px] uppercase tracking-widest text-cyan-brand font-bold mb-2">
-              With BharatCMS
-            </p>
-            <h3 className="text-3xl md:text-4xl font-black text-white">
-              Day One Ready
-            </h3>
-            <p className="text-sm text-white/50 mt-2">
-              Skip the setup. Start shipping features.
-            </p>
-          </div>
-
-          {/* List */}
-          <ul className="relative space-y-4">
-            {[
-              { time: '0 mins', task: 'Razorpay ready out-of-box', detail: 'UPI, cards, subscriptions, webhooks' },
-              { time: '0 mins', task: 'GST invoices auto-generated', detail: 'Compliant PDFs with all tax splits' },
-              { time: '0 mins', task: 'Mumbai hosting included', detail: 'ap-south-1, sub-50ms latency' },
-              { time: '0 mins', task: 'India-first by default', detail: '₹ symbol, DD/MM dates, regional UX' },
-            ].map((item, i) => (
-              <motion.li
-                key={item.task}
-                initial={{ opacity: 0, x: 10 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 + i * 0.08 }}
-                className="flex items-start gap-4 group/item"
-              >
-                {/* Time badge */}
-                <div className="shrink-0 w-16 text-center">
-                  <div className="px-2 py-1 rounded-md bg-cyan-brand/15 border border-cyan-brand/30">
-                    <p className="text-[10px] font-mono font-bold text-cyan-brand uppercase">
-                      {item.time}
+                {/* Bottom Result */}
+                <div className="mt-8 pt-6 border-t border-cyan-brand/20">
+                  <div className="flex items-center justify-between">
+                    <p className="text-xs text-white/40 uppercase tracking-wider">
+                      Time saved
+                    </p>
+                    <p className="text-2xl font-black text-cyan-brand">
+                      3-4 weeks
                     </p>
                   </div>
                 </div>
-
-                {/* Content */}
-                <div className="flex-1 pb-3 border-b border-white/5 last:border-0">
-                  <p className="text-white font-semibold text-base">
-                    {item.task}
-                  </p>
-                  <p className="text-white/50 text-xs mt-1">
-                    {item.detail}
-                  </p>
-                </div>
-              </motion.li>
-            ))}
-          </ul>
-
-          {/* Bottom Result */}
-          <div className="mt-8 pt-6 border-t border-cyan-brand/20">
-            <div className="flex items-center justify-between">
-              <p className="text-xs text-white/40 uppercase tracking-wider">
-                Time saved
-              </p>
-              <p className="text-2xl font-black text-cyan-brand">
-                3-4 weeks
-              </p>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </motion.div>
-    </div>
-  </div>
 
-  {/* Bottom Stats Strip */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay: 0.4 }}
-    className="mt-12 grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
-  >
-    {[
-      { value: '3-4 weeks', label: 'Time saved per project' },
-      { value: '₹0', label: 'Setup cost' },
-      { value: 'Day 1', label: 'Ready to ship' },
-    ].map((stat, i) => (
-      <div
-        key={stat.label}
-        className="glass rounded-2xl p-4 md:p-6 text-center border border-white/10 hover:border-cyan-brand/30 transition"
-      >
-        <p className="text-xl md:text-2xl font-black text-cyan-brand mb-1">
-          {stat.value}
-        </p>
-        <p className="text-[10px] md:text-xs uppercase tracking-wider text-white/50 font-semibold">
-          {stat.label}
-        </p>
-      </div>
-    ))}
-  </motion.div>
-</section>
+        {/* Bottom Stats Strip */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-12 grid grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto"
+        >
+          {[
+            { value: '3-4 weeks', label: 'Time saved per project' },
+            { value: '₹0', label: 'Setup cost' },
+            { value: 'Day 1', label: 'Ready to ship' },
+          ].map((stat, i) => (
+            <div
+              key={stat.label}
+              className="glass rounded-2xl p-4 md:p-6 text-center border border-white/10 hover:border-cyan-brand/30 transition"
+            >
+              <p className="text-xl md:text-2xl font-black text-cyan-brand mb-1">
+                {stat.value}
+              </p>
+              <p className="text-[10px] md:text-xs uppercase tracking-wider text-white/50 font-semibold">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+      </section>
 
       {/* ============ #BUILDINPUBLIC STATS ============ */}
       <section id="stats" className="bg-black/30 py-20 border-y border-white/5 relative">
@@ -855,7 +858,7 @@ export default function LandingPage() {
                 <span className="text-white/50">once</span>
               </div>
               <p className="text-white/60 mb-6 max-w-md mx-auto text-sm">
-                Lock in <span className="text-white font-semibold">Starter limits forever</span>. 
+                Lock in <span className="text-white font-semibold">Starter limits forever</span>.
                 Add-ons stay pay-as-you-go.
               </p>
               <a href="#waitlist" className="btn-neo inline-block bg-saffron-brand text-black px-8 py-3 rounded-xl font-bold transition" style={{ boxShadow: '0 0 30px rgba(255,153,51,0.3)' }}>
@@ -866,186 +869,186 @@ export default function LandingPage() {
         </div>
       </section>
 
-     {/* ============ SCOPE (Premium UI) ============ */}
-<section id="scope" className="max-w-6xl mx-auto px-6 md:px-8 py-32">
-  {/* Header */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="text-center mb-16"
-  >
-    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
-      <AlertCircle className="w-3 h-3 text-saffron-brand" />
-      <span className="text-xs font-semibold tracking-wider uppercase text-white/70">
-        Honest Scope
-      </span>
-    </div>
-    <h2 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
-      Built for <span className="text-cyan-brand">Developers</span>.
-      <br />
-      Not <span className="text-white/30 line-through decoration-red-500/60 decoration-2">Everyone</span>.
-    </h2>
-    <p className="text-lg text-white/50 max-w-xl mx-auto">
-      Clear scope. No surprises. No marketing fluff.
-    </p>
-  </motion.div>
-
-  {/* Comparison Cards */}
-  <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-    
-    {/* WHAT IT IS */}
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className="relative group"
-    >
-      {/* Glow effect */}
-      <div className="absolute -inset-0.5 bg-gradient-to-br from-emerald-500/30 via-cyan-brand/20 to-emerald-500/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500" />
-      
-      <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-emerald-500/20 bg-gradient-to-br from-emerald-500/[0.08] via-transparent to-cyan-brand/[0.05] h-full">
+      {/* ============ SCOPE (Premium UI) ============ */}
+      <section id="scope" className="max-w-6xl mx-auto px-6 md:px-8 py-32">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">
-              <CheckCircle2 className="w-6 h-6 text-emerald-400" />
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-widest text-emerald-400/80 font-bold">
-                What it IS
-              </p>
-              <h3 className="text-2xl font-black text-white">
-                Core Promise
-              </h3>
-            </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
+            <AlertCircle className="w-3 h-3 text-saffron-brand" />
+            <span className="text-xs font-semibold tracking-wider uppercase text-white/70">
+              Honest Scope
+            </span>
           </div>
-        </div>
-
-        {/* List */}
-        <ul className="space-y-4">
-          {[
-            { label: 'Headless CMS', sub: 'Built on Strapi v4 (MIT)' },
-            { label: 'Razorpay Payments', sub: 'UPI, cards, subscriptions' },
-            { label: 'GST Invoice PDFs', sub: 'HSN codes, tax splits' },
-            { label: 'Mumbai-Hosted', sub: 'ap-south-1, sub-50ms' },
-            { label: 'Open Source', sub: 'MIT licensed, self-host friendly' },
-          ].map((item, i) => (
-            <motion.li
-              key={item.label}
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 + i * 0.05 }}
-              className="flex items-start gap-3 group/item"
-            >
-              <div className="w-5 h-5 rounded-md bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-emerald-500/30 transition">
-                <Check className="w-3 h-3 text-emerald-400" strokeWidth={3} />
-              </div>
-              <div>
-                <p className="text-white font-semibold text-base leading-tight">
-                  {item.label}
-                </p>
-                <p className="text-white/40 text-sm mt-0.5">
-                  {item.sub}
-                </p>
-              </div>
-            </motion.li>
-          ))}
-        </ul>
-
-        {/* Bottom tag */}
-        <div className="mt-8 pt-6 border-t border-white/5">
-          <p className="text-xs text-emerald-400/70 font-mono">
-            → If this matches your needs, you're in the right place.
+          <h2 className="text-4xl md:text-6xl font-black mb-4 leading-tight">
+            Built for <span className="text-cyan-brand">Developers</span>.
+            <br />
+            Not <span className="text-white/30 line-through decoration-red-500/60 decoration-2">Everyone</span>.
+          </h2>
+          <p className="text-lg text-white/50 max-w-xl mx-auto">
+            Clear scope. No surprises. No marketing fluff.
           </p>
-        </div>
-      </div>
-    </motion.div>
+        </motion.div>
 
-    {/* WHAT IT IS NOT */}
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.1 }}
-      className="relative group"
-    >
-      {/* Glow effect */}
-      <div className="absolute -inset-0.5 bg-gradient-to-br from-red-500/20 via-saffron-brand/10 to-red-500/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500" />
-      
-      <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-red-500/20 bg-gradient-to-br from-red-500/[0.05] via-transparent to-saffron-brand/[0.03] h-full">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center">
-              <AlertCircle className="w-6 h-6 text-red-400" />
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-widest text-red-400/80 font-bold">
-                What it's NOT
-              </p>
-              <h3 className="text-2xl font-black text-white">
-                Honest Limits
-              </h3>
-            </div>
-          </div>
-        </div>
+        {/* Comparison Cards */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
 
-        {/* List */}
-        <ul className="space-y-4">
-          {[
-            { label: 'Not Shopify', sub: "We're a CMS, not a storefront builder" },
-            { label: 'Not Tally / Zoho', sub: 'No GST filing — just invoices' },
-            { label: 'Not WATI / Gupshup', sub: 'WhatsApp is a paid add-on' },
-            { label: 'Not No-Code', sub: 'Developers only (for now)' },
-            { label: 'Not Magic AI', sub: 'AI-assisted, not AI-everything' },
-          ].map((item, i) => (
-            <motion.li
-              key={item.label}
-              initial={{ opacity: 0, x: 10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 + i * 0.05 }}
-              className="flex items-start gap-3 group/item"
-            >
-              <div className="w-5 h-5 rounded-md bg-red-500/15 border border-red-500/40 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-red-500/25 transition">
-                {/* < className="w-3 h-3 text-red-400" strokeWidth={3} /> */}
+          {/* WHAT IT IS */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative group"
+          >
+            {/* Glow effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-br from-emerald-500/30 via-cyan-brand/20 to-emerald-500/30 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500" />
+
+            <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-emerald-500/20 bg-gradient-to-br from-emerald-500/[0.08] via-transparent to-cyan-brand/[0.05] h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-emerald-400/80 font-bold">
+                      What it IS
+                    </p>
+                    <h3 className="text-2xl font-black text-white">
+                      Core Promise
+                    </h3>
+                  </div>
+                </div>
               </div>
-              <div>
-                <p className="text-white font-semibold text-base leading-tight">
-                  {item.label}
-                </p>
-                <p className="text-white/40 text-sm mt-0.5">
-                  {item.sub}
+
+              {/* List */}
+              <ul className="space-y-4">
+                {[
+                  { label: 'Headless CMS', sub: 'Built on Strapi v4 (MIT)' },
+                  { label: 'Razorpay Payments', sub: 'UPI, cards, subscriptions' },
+                  { label: 'GST Invoice PDFs', sub: 'HSN codes, tax splits' },
+                  { label: 'Mumbai-Hosted', sub: 'ap-south-1, sub-50ms' },
+                  { label: 'Open Source', sub: 'MIT licensed, self-host friendly' },
+                ].map((item, i) => (
+                  <motion.li
+                    key={item.label}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 + i * 0.05 }}
+                    className="flex items-start gap-3 group/item"
+                  >
+                    <div className="w-5 h-5 rounded-md bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-emerald-500/30 transition">
+                      <Check className="w-3 h-3 text-emerald-400" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-base leading-tight">
+                        {item.label}
+                      </p>
+                      <p className="text-white/40 text-sm mt-0.5">
+                        {item.sub}
+                      </p>
+                    </div>
+                  </motion.li>
+                ))}
+              </ul>
+
+              {/* Bottom tag */}
+              <div className="mt-8 pt-6 border-t border-white/5">
+                <p className="text-xs text-emerald-400/70 font-mono">
+                  → If this matches your needs, you're in the right place.
                 </p>
               </div>
-            </motion.li>
-          ))}
-        </ul>
+            </div>
+          </motion.div>
 
-        {/* Bottom tag */}
-        <div className="mt-8 pt-6 border-t border-white/5">
-          <p className="text-xs text-red-400/70 font-mono">
-            → Need these? Use the right tool for the job.
+          {/* WHAT IT IS NOT */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="relative group"
+          >
+            {/* Glow effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-br from-red-500/20 via-saffron-brand/10 to-red-500/20 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500" />
+
+            <div className="relative glass-strong rounded-3xl p-8 md:p-10 border border-red-500/20 bg-gradient-to-br from-red-500/[0.05] via-transparent to-saffron-brand/[0.03] h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center">
+                    <AlertCircle className="w-6 h-6 text-red-400" />
+                  </div>
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-red-400/80 font-bold">
+                      What it's NOT
+                    </p>
+                    <h3 className="text-2xl font-black text-white">
+                      Honest Limits
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+              {/* List */}
+              <ul className="space-y-4">
+                {[
+                  { label: 'Not Shopify', sub: "We're a CMS, not a storefront builder" },
+                  { label: 'Not Tally / Zoho', sub: 'No GST filing — just invoices' },
+                  { label: 'Not WATI / Gupshup', sub: 'WhatsApp is a paid add-on' },
+                  { label: 'Not No-Code', sub: 'Developers only (for now)' },
+                  { label: 'Not Magic AI', sub: 'AI-assisted, not AI-everything' },
+                ].map((item, i) => (
+                  <motion.li
+                    key={item.label}
+                    initial={{ opacity: 0, x: 10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 + i * 0.05 }}
+                    className="flex items-start gap-3 group/item"
+                  >
+                    <div className="w-5 h-5 rounded-md bg-red-500/15 border border-red-500/40 flex items-center justify-center shrink-0 mt-0.5 group-hover/item:bg-red-500/25 transition">
+                      {/* < className="w-3 h-3 text-red-400" strokeWidth={3} /> */}
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-base leading-tight">
+                        {item.label}
+                      </p>
+                      <p className="text-white/40 text-sm mt-0.5">
+                        {item.sub}
+                      </p>
+                    </div>
+                  </motion.li>
+                ))}
+              </ul>
+
+              {/* Bottom tag */}
+              <div className="mt-8 pt-6 border-t border-white/5">
+                <p className="text-xs text-red-400/70 font-mono">
+                  → Need these? Use the right tool for the job.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Bottom Trust Line */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-12"
+        >
+          <p className="text-sm text-white/40 italic max-w-2xl mx-auto">
+            "We'd rather lose a customer to clarity than win one with confusion."
           </p>
-        </div>
-      </div>
-    </motion.div>
-  </div>
-
-  {/* Bottom Trust Line */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="text-center mt-12"
-  >
-    <p className="text-sm text-white/40 italic max-w-2xl mx-auto">
-      "We'd rather lose a customer to clarity than win one with confusion."
-    </p>
-  </motion.div>
-</section>
+        </motion.div>
+      </section>
 
       {/* ============ FINAL CTA (Stronger) ============ */}
       <section className="max-w-5xl mx-auto px-6 md:px-8 py-32">
